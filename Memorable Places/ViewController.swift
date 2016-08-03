@@ -24,6 +24,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
     }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        print(locations)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
