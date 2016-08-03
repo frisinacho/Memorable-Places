@@ -24,11 +24,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
-        var uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
+        let uilpgr = UILongPressGestureRecognizer(target: self, action: "action:")
         
         uilpgr.minimumPressDuration = 2.0
         
         map.addGestureRecognizer(uilpgr)
+    }
+    
+    func action(gestureRecognizer:UIGestureRecognizer) {
+        
+        if gestureRecognizer.state == UIGestureRecognizerState.Began {
+            
+            let touchPoint = gestureRecognizer.locationInView(self.map)
+            
+            let newCoordinate = map.convertPoint(touchPoint, toCoordinateFromView: self.map)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = newCoordinate
+            annotation.title = "New Annotation"
+            self.map.addAnnotation(annotation)
+        }
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
