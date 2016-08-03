@@ -13,6 +13,7 @@
 		66EFF8251D51FED700FB6DD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66EFF8241D51FED700FB6DD0 /* Assets.xcassets */; };
 		66EFF8281D51FED700FB6DD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66EFF8261D51FED700FB6DD0 /* LaunchScreen.storyboard */; };
 		66EFF8301D52032E00FB6DD0 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EFF82F1D52032E00FB6DD0 /* TableViewController.swift */; };
+		66EFF8321D52064D00FB6DD0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EFF8311D52064D00FB6DD0 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		66EFF8271D51FED700FB6DD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66EFF8291D51FED700FB6DD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66EFF82F1D52032E00FB6DD0 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		66EFF8311D52064D00FB6DD0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66EFF8321D52064D00FB6DD0 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 		66EFF8111D51FED700FB6DD0 = {
 			isa = PBXGroup;
 			children = (
+				66EFF8311D52064D00FB6DD0 /* CoreLocation.framework */,
 				66EFF81C1D51FED700FB6DD0 /* Memorable Places */,
 				66EFF81B1D51FED700FB6DD0 /* Products */,
 			);
