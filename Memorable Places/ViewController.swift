@@ -28,6 +28,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         print(locations)
+        
+        let userLocation: CLLocation = locations[0] 
+        
+        let latitude = userLocation.coordinate.latitude
+        let longitude = userLocation.coordinate.longitude
+        let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+        
+        let latDelta:CLLocationDegrees = 0.01
+        let lonDelta:CLLocationDegrees = 0.01
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(coordinate, span)
+        
+        self.map.setRegion(region, animated: true)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
