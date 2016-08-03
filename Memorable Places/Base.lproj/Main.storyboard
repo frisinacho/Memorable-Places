@@ -47,6 +47,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="FcM-jI-qrI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="jnz-pe-t5k"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="nSo-Zb-vcR">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="V0O-BZ-Nxp"/>
