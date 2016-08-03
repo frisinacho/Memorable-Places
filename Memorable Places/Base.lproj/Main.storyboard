@@ -30,21 +30,24 @@
                             <constraint firstItem="wQU-il-5TV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rja-a0-tDG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="wQU-il-5TV" id="Ppu-fa-pno"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1315" y="809"/>
         </scene>
-        <!--Title-->
+        <!--Root View Controller-->
         <scene sceneID="EiW-0M-FW8">
             <objects>
-                <tableViewController id="oHw-WE-2fa" sceneMemberID="viewController">
+                <tableViewController id="oHw-WE-2fa" customClass="TableViewController" customModule="Memorable_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aAb-sg-PAM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SFa-Dp-q9N">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="SFa-Dp-q9N">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SFa-Dp-q9N" id="50h-33-0gR">
@@ -58,7 +61,7 @@
                             <outlet property="delegate" destination="oHw-WE-2fa" id="ms3-YB-gWW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="FcM-jI-qrI">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="FcM-jI-qrI">
                         <barButtonItem key="backBarButtonItem" title="Back" id="jnz-pe-t5k"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nSo-Zb-vcR">
                             <connections>
