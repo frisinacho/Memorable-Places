@@ -63,6 +63,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     }
                 }
                 
+                if title == "" {
+                    
+                    title = "Added \(NSDate())"
+                }
+                
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = newCoordinate
                 annotation.title = title
