@@ -39,6 +39,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             let newCoordinate = map.convertPoint(touchPoint, toCoordinateFromView: self.map)
             
+            let locations = CLLocation(latitude: newCoordinate.latitude, longitude: newCoordinate.longitude)
+            
+            CLGeocoder().reverseGeocodeLocation(locations, completionHandler: { (placemarks, error) in
+                
+                if (error == nil) {
+                    
+                    if let p = placemarks?[0] {
+                        
+                        var subThoroughfare:String = ""
+                        var thoroughfare:String = ""
+                        
+                        if p.subThoroughfare != nil {
+                            subThoroughfare = p.subThoroughfare!
+                        }
+                        if p.thoroughfare != nil {
+                            thoroughfare = p.thoroughfare!
+                        }
+                        
+                        var title = "\(subThoroughfare) \(thoroughfare)"
+                    }
+                }
+            })
+            
             let annotation = MKPointAnnotation()
             annotation.coordinate = newCoordinate
             annotation.title = "New Annotation"
