@@ -43,6 +43,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             CLGeocoder().reverseGeocodeLocation(locations, completionHandler: { (placemarks, error) in
                 
+                var title = ""
+                
                 if (error == nil) {
                     
                     if let p = placemarks?[0] {
@@ -57,15 +59,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                             thoroughfare = p.thoroughfare!
                         }
                         
-                        var title = "\(subThoroughfare) \(thoroughfare)"
+                        title = "\(subThoroughfare) \(thoroughfare)"
                     }
                 }
+                
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = newCoordinate
+                annotation.title = title
+                self.map.addAnnotation(annotation)
             })
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = newCoordinate
-            annotation.title = "New Annotation"
-            self.map.addAnnotation(annotation)
         }
     }
     
