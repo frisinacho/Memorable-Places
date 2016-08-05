@@ -8,6 +8,8 @@
 
 import UIKit
 
+var places = [Dictionary<String,String>()]
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
