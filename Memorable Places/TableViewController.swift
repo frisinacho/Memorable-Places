@@ -15,7 +15,9 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if places.count == 0 {
+        if places.count == 1 {
+            
+            places.removeAtIndex(0)
             
             places.append(["name":"Taj Mahal", "lat":"27.175277", "lon":"78.042128"])
         }
