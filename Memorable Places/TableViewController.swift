@@ -49,6 +49,11 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func viewWillAppear(animated: Bool){
+        
+        tableView.reloadData()
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
