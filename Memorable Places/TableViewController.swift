@@ -10,6 +10,8 @@ import UIKit
 
 var places = [Dictionary<String,String>()]
 
+var activePlace = -1    // -1 = No active place
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -47,6 +49,13 @@ class TableViewController: UITableViewController {
         cell.textLabel?.text = places[indexPath.row]["name"]
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        
+        activePlace = indexPath.row
+        
+        return indexPath
     }
     
     override func viewWillAppear(animated: Bool){

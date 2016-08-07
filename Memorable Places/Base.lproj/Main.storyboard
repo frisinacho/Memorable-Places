@@ -54,6 +54,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9A1-Wx-erX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -91,4 +94,7 @@
             <point key="canvasLocation" x="-236" y="779"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="V0O-BZ-Nxp"/>
+    </inferredMetricsTieBreakers>
 </document>
