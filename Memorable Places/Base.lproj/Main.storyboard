@@ -68,7 +68,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="jnz-pe-t5k"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nSo-Zb-vcR">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="V0O-BZ-Nxp"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="newPlace" id="V0O-BZ-Nxp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
